@@ -5,104 +5,104 @@
    ####a) напишите функцию, которая получает на вход исходный массив и возвращает 2 максимальных значения
 
 ```
-# возвращает массив из двух максимальных значений
-
-# массива чисел в порядке по убыванию
-def two_max_values_from(array_of_numbers)
-max = 0
-pre_max = 0
-
-array_of_numbers.each do |number|
-if number >= max
-pre_max = max
-max = number
-elsif number >= pre_max
-pre_max = number
-end
-end
-
-[max, pre_max]
-end
+   # возвращает массив из двух максимальных значений
+   
+   # массива чисел в порядке по убыванию
+   def two_max_values_from(array_of_numbers)
+   max = 0
+   pre_max = 0
+   
+   array_of_numbers.each do |number|
+   if number >= max
+   pre_max = max
+   max = number
+   elsif number >= pre_max
+   pre_max = number
+   end
+   end
+   
+   [max, pre_max]
+   end
 ```
 
 ####b) напишите функцию, которая получает на вход исходный массив и возвращает 2 минимальных значения
 
 ```
-# возвращает массив из двух минимальных значений
-
-# массива чисел в порядке по возрастанию
-
-def two_min_values_from(array_of_numbers)
-
-# приравняем искомые числа к бесконечности
-
-min = 1.0 / 0.0
-pre_min = min
-
-array_of_numbers.each do |number|
-if number <= min
-pre_min = min
-min = number
-elsif number <= pre_min
-pre_min = number
-end
-end
-
-[min, pre_min]
-end
+   # возвращает массив из двух минимальных значений
+   
+   # массива чисел в порядке по возрастанию
+   
+   def two_min_values_from(array_of_numbers)
+   
+   # приравняем искомые числа к бесконечности
+   
+   min = 1.0 / 0.0
+   pre_min = min
+   
+   array_of_numbers.each do |number|
+   if number <= min
+   pre_min = min
+   min = number
+   elsif number <= pre_min
+   pre_min = number
+   end
+   end
+   
+   [min, pre_min]
+   end
 ```
 
 ###2) Есть массив arr = [{a: 1, b: 2, c: 45}, {d: 123, c: 12}, {e: 87}]
 
 ####a) напишите выражение, которое получает массив всех ключей
 ```
-# Возвращает массив ключей массива хешей
-def get_keys(hashes_array)
-
-# массив ключей
-keys = []
-
-hashes_array.each do |hash|
-hash.each_key { |key| keys << key }
-end
-
-keys
-end
+   # Возвращает массив ключей массива хешей
+   def get_keys(hashes_array)
+   
+   # массив ключей
+   keys = []
+   
+   hashes_array.each do |hash|
+   hash.each_key { |key| keys << key }
+   end
+   
+   keys
+   end
 ```
 
 ####b) напишите выражение, которое получает массив всех значений
 
 ```
-# Возвращает массив значений массива хешей
-def get_values(hashes_array)
-
-# массив значений
-values = []
-
-hashes_array.each do |hash|
-hash.each_value { |value| values << value }
-end
-
-values
-end
+   # Возвращает массив значений массива хешей
+   def get_values(hashes_array)
+   
+   # массив значений
+   values = []
+   
+   hashes_array.each do |hash|
+   hash.each_value { |value| values << value }
+   end
+   
+   values
+   end
 ```
 
 ####с) напишите выражение, которое получает сумму всех значений
 
 ```
-# Возвращает массив значений массива хешей
-def get_values_sum(hashes_array)
-
-# сумма значений
-sum = 0
-
-hashes_array.each do |hash|
-
-hash.each_value { |value| sum += value }
-end
-
-sum
-end
+   # Возвращает массив значений массива хешей
+   def get_values_sum(hashes_array)
+   
+   # сумма значений
+   sum = 0
+   
+   hashes_array.each do |hash|
+   
+   hash.each_value { |value| sum += value }
+   end
+   
+   sum
+   end
 ```
 
 ###3) Найдите вхождения каждого элемента в массив
@@ -111,15 +111,15 @@ end
    чтобы на выходе получился Hash по типу { элемент => количество вхождений в массив}
 
 ```
-# Возвращает количество вхождений элементов в массив
-def get_each_element_quantity(array)
-
-result = Hash.new
-
-array.each { |element| result[element] = array.count(element) }
-
-result
-end
+   # Возвращает количество вхождений элементов в массив
+   def get_each_element_quantity(array)
+   
+   result = Hash.new
+   
+   array.each { |element| result[element] = array.count(element) }
+   
+   result
+   end
 ```
 
 ###4) Напишите функцию 
